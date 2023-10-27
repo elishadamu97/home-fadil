@@ -1,0 +1,61 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+  <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/img/{{site.favicon}}">
+  <!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico?v=qA3OXqyw77"><![endif]-->
+  <meta name="apple-mobile-web-app-title" content="Sleek">
+  <meta name="application-name" content="Sleek">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.1/css/all.min.css" integrity="sha512-/RUbtHakVMJrg1ILtwvDIceb/cDkk97rWKvfnFSTOmNbytCyEylutDqeEr9adIBye3suD3RfcsXLOLBqYRW4gw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  {% if site.google_tag_manager %}
+
+    {% include gtm.html %}
+
+  {% endif %}
+
+  <style class="inlineCSS">
+
+    {% include critical.css %}
+
+    /* left: calc(50% + 400px); /* Positioned relative to the article */
+    /* CSS for the sidebar */
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      position: fixed;
+      left: -215px;
+      margin-top: 60px;
+      transition: left 0.3s;
+      overflow: auto; /* Added overflow property */
+      background-color: rgb(70, 69, 69); /* Added for visibility */
+    }
+
+    /* CSS for the main content */
+  
+
+    /* CSS for the button */
+    .toggle-btn {
+      cursor: pointer;
+      position: fixed;
+      margin-top: 10px;
+      left: 10px;
+      font-size: 24px;
+      background-color: rgb(70, 69, 69); /* Added for visibility */
+    }
+
+
+
+
+  </style>
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="{{ '/assets/css/custom.css' | relative_url }}" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+  <script type="text/javascript">
+   {% include loadCss.js %}
+  </script>
+
+</head>
