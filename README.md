@@ -1,2 +1,0 @@
-# home
-My tech corner
